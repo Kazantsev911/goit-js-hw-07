@@ -11,9 +11,10 @@ const boxes = document.querySelector("#boxes");
 // console.log(createBtn);
 // console.log(destroyBtn);
 function createBoxes(inputValue) {
+  // console.log(inputValue);
   cleanerBoxes();
   let createDivBoxes = "";
-  for (let i; i < inputValue; i++) {
+  for (let i = 0; i < inputValue; i++) {
     createDivBoxes += `<div style="background-color: ${getRandomHexColor()}; 
     width: ${30 + i * 10}px; 
     height: ${30 + i * 10}px;"></div>`;
@@ -30,6 +31,7 @@ function handlerCreate() {
   const inputValue = parseInt(input.value);
   // console.log(inputValue);
   if (inputValue >= 1 && inputValue <= 100) {
+    // console.log("inputValue is true");
     boxes.insertAdjacentHTML("beforeend", createBoxes(inputValue));
     input.value = "";
     // console.dir(boxes);
