@@ -30,8 +30,8 @@ function createMarkup(arr) {
   return arr
     .map(
       ({ url, alt }) => `
-    <li>
-      <img class="gallery-image" src="${url}" alt="${alt}" width= "300" />
+    <li class="gallery-item">
+      <img src="${url}" alt="${alt}" width= "360" height= "300" />
     </li>
   `
     )
